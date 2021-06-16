@@ -5,7 +5,7 @@
 
     $TicketData=mysqli_query($con, "select * from ticket where status_id=1");
     $ProjectData=mysqli_query($con, "select * from project");
-    $CategoryData=mysqli_query($con, "select * from category");
+    $CategoryData=mysqli_query($con, "select * from ticket where status_id=3");
     $UserData=mysqli_query($con, "select * from user order by created_at desc");
 ?>
     <div class="right_col" role="main"> <!-- page content -->
@@ -21,18 +21,19 @@
                     </div>
                     <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="tile-stats">
+                          <div class="icon"><i class="fa fa-ticket"></i></div>
+                          <div class="count"><?php echo mysqli_num_rows($CategoryData) ?></div>
+                          <h3>Tickets cerrados</h3>
+                        </div>
+                    </div>
+                    <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="tile-stats">
                           <div class="icon"><i class="fa fa-list-alt"></i></div>
                           <div class="count"><?php echo mysqli_num_rows($ProjectData) ?></div>
                           <h3>Proyectos</h3>
                         </div>
                     </div>
-                    <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <div class="tile-stats">
-                          <div class="icon"><i class="fa fa-th-list"></i></div>
-                          <div class="count"><?php echo mysqli_num_rows($CategoryData) ?></div>
-                          <h3>Categorias</h3>
-                        </div>
-                    </div>
+                    
                     <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="tile-stats">
                           <div class="icon"><i class="fa fa-users"></i></div>

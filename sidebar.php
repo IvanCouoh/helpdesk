@@ -13,9 +13,9 @@
                         <a href="projects.php"><i class="fa fa-list-alt"></i> Proyectos</a>
                     </li>
 
-                    <li class="<?php if(isset($active4)){echo $active4;}?>">
+                    <!-- <li class="<?php if(isset($active4)){echo $active4;}?>">
                         <a href="categories.php"><i class="fa fa-align-left"></i> Categorias</a>
-                    </li>
+                    </li> -->
 
                     <li class="<?php if(isset($active5)){echo $active5;}?>">
                         <a href="reports.php"><i class="fa fa-area-chart"></i> Reportes</a>
@@ -25,9 +25,9 @@
                         <a href="users.php"><i class="fa fa-users"></i> Usuarios</a>
                     </li>
 
-                    <li class="<?php if(isset($active8)){echo $active8;}?>">
+                    <!-- <li class="<?php if(isset($active8)){echo $active8;}?>">
                         <a href="about.php"><i class="fa fa-child"></i> Sobre Mi</a>
-                    </li>
+                    </li> -->
 
                 </ul>
             </div>
